@@ -217,7 +217,8 @@ function getAuthURL (config) {
     scope         : `${PICASA_SCOPE}`,
     response_type : 'code',
     client_id     : config.clientId,
-    redirect_uri  : config.redirectURI
+    redirect_uri  : config.redirectURI,
+    prompt: 'consent'
   }
 
   const authenticationQuery = querystring.stringify(authenticationParams)
